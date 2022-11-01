@@ -1,0 +1,96 @@
+:root {
+  --textDark-- : #ffffff;
+  --textLight-- : #4A4E74;
+  --containerAppDark-- : #00030a;
+  --title-- : #F3BF99;
+  --linkedin-- :#5093E2;
+  --icon-- : #918E9B;
+  --bodyDark-- : #1A1B21;
+  --bodyLight--: #F5F5F5;
+  --footerDark-- : #161619;
+  --footerLight-- : #161619;
+}
+
+
+.containerApp {
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  background: var(--containerAppDark--);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  text-align: center;
+  height: 40.75rem;
+  background: #23252C;
+  width: 19.1rem;
+  border-radius: 10px;
+}
+.App .header img {
+  /* margin-bottom: -18px; */
+}
+.App .body {
+  background: var(--bodyDark--);
+  height: 23.5rem;
+  color: var(--textDark--);
+}
+.App .body .info h1 {
+  font-size: 23px;
+}
+.App .body .info h2 {
+  font-size: 12px;
+  margin-top: -14px;
+  color: var(--title--);
+}
+.App .body .info h3 {
+  font-size: 10px;
+  margin-top: -10px;
+  color: var(--textDark--);
+}
+.App .body .connect {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.App .body .connect button {
+  height: 30px;
+  width: 120px;
+  border-radius: 6px;
+}
+.App .body .connect button a {
+  text-decoration: none;
+  color: var(--containerAppDark--);
+}
+.App .body .connect button:nth-child(2) {
+  background: var(--linkedin--);
+}
+.App .body .about {
+  text-align: start;
+  margin-left: 20px;
+  padding-right: 20px;
+  color: var(--textDark--);
+}
+.App .body .about h1 {
+  font-size: 20px;
+}
+.App .body .about p {
+  font-size: 12px;
+}
+.App .footer {
+  height: 4.75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.App .footer .icon {
+  font-size: 35px;
+  margin-right: 20px;
+  transform: translateX(10px);
+  margin-top: 20px;
+  color: var(--icon--);
+}
