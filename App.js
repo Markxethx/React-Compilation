@@ -2,6 +2,18 @@ import profile2 from './profile2.png';
 import './App.css';
 
 function App() {
+  const date = new Date()
+  const hour = date.getHours()
+  let timeToday;
+
+  if (hour < 12) {
+    timeToday = "Morning";
+  } else if (hour >= 12 && hour <= 17) {
+    timeToday = "Afternoon";
+  } else {
+    timeToday = "Evening";
+  }
+
   return (
     <div className='containerApp'>
     <div className="App">
@@ -20,9 +32,10 @@ function App() {
         </div>
         <div className='about'>
           <h1>About</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates doloribus modi nihil sunt a vero fugit magni quod illo minima quidem vitae, ipsum, magnam deserunt perspiciatis molestias dolore cupiditate dolorem.</p>
-          <h1>Interests</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus libero porro dolor placeat enim repudiandae natus illo rem minus voluptatibus!</p>
+          <p>Good {timeToday}! I was just a random pop up. A reincarnation with a little amount of time, trying my best to become a better person. Looking forward to help other people. Hey, just smile and know that everything will be okay &#128513;</p>
+          <h1>Current Thought</h1>
+          <p>Don't waste time. Learn programming. HTML, CSS and JavaScript. Thank me Later. <br /></p>
+          <strong className='dm'>Dm for RoadMap &#128522;</strong>
         </div>
       </body>
       <footer className='footer'>
