@@ -1,0 +1,20 @@
+import React from "react"
+
+export default function App() {
+    const [isImportant, func] = React.useState("Yes") // since we know that React.useState() return an array, we can destructure them.
+    console.log(isImportant)
+    return (
+        <div className="state">
+            <h1 className="state--title">Is state important to know?</h1>
+            <div className="state--value">
+                <h1>{isImportant}</h1>
+            </div>
+        </div>
+    )
+}
+
+// remember
+//const result = React.useState("string")
+//is equal to (using array destructing)
+//[string, function] = React.useState("string")
+//we can now all string along.
