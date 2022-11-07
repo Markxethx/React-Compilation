@@ -1,0 +1,18 @@
+import React from "react"
+
+export default function App() {
+    const [isImportant, setIsImportant] = React.useState("Yes")
+    
+    function handleClick() {
+        setIsImportant("No") //here we set the f() to return string "No"
+    }
+    
+    return (
+        <div className="state">
+            <h1 className="state--title">Is state important to know?</h1>
+            <div className="state--value" onClick={handleClick}> // we are listening to click events
+                <h1>{isImportant}</h1>
+            </div>
+        </div>
+    )
+}
