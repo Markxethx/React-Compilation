@@ -1,0 +1,24 @@
+import React from "react"
+
+export default function App() {
+    /**
+     * Challenge: Set up state to track our count (initial value is 0)
+     */
+    const [isImportant , func ] = React.useState(Number(0))  //we know that React.useState("string") will return an array of ["string", fxn], that is why we use array destructing.
+    let count = 0;
+    function countMinus() {
+        func(isImportant - 1)
+    }
+    function countAdd() {
+        func(isImportant + 1)
+    }
+    return (
+        <div className="counter">
+            <button onClick={countMinus} className="counter--minus">–</button>
+            <div className="counter--count">
+                <h1>{isImportant}</h1>
+            </div>
+            <button onClick={countAdd} className="counter--plus">+</button>
+        </div>
+    )
+}
