@@ -1,0 +1,32 @@
+import React from "react"
+import boxes from "./boxes"
+import Box from "./Box"
+
+export default function App() {
+    const [squares, setSquares] = React.useState(boxes)
+    
+    function toggle(id) {
+        setSquares(prevSquares => {
+            return prevSquares.map(item => {
+                return item.id === id ? {...item, on: !item.on } :  item
+            })
+        })
+    }
+    const squareElements = squares.map( square => (
+        <Box 
+        key={square.id}
+        on={square.on}
+        toggle={() => toggle(square.id)}        //here we past the () => toggle, so that individual boxes should carry theyr own id's
+        />
+    ))
+    //
+    
+    
+    
+    
+    return (
+        <main>
+            {squareElements}
+        </main>
+    )
+}
