@@ -1,13 +1,6 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/react-mde@11.5.0/lib/styles/css/react-mde-all.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="root"></div>
-        <script src="index.pack.js"></script>
-    </body>
-</html>
+import React from "react"
+import ReactDOM from "react-dom"
+
+import App from "./App"
+
+ReactDOM.render(<App />, document.getElementById("root"))
