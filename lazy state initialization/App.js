@@ -13,7 +13,7 @@ export default function App() {
      * of the App component
      */
     const [notes, setNotes] = React.useState(
-        () => JSON.parse(localStorage.getItem("notes")) || []
+        () => JSON.parse(localStorage.getItem("notes")) || [] // using () =>, we intend this to be a function to becalled, that's why it's called lazy state
     )
     const [currentNoteId, setCurrentNoteId] = React.useState(
         (notes[0] && notes[0].id) || ""
