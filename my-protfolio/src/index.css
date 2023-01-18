@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brown-color: #b16c04;
+  --white-color: #ffffff;
+}
+
+.text-brown {
+  color: var(--brown-color);
+}
+
+.text-white {
+  color: var(--white-color);
+}
+.text-gradient {
+  font-family: 'font-poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+
+  background: radial-gradient(
+    102.46% 3911.26% at 90.9% 55.36%,
+    #B16C04 0%,
+    #EFD1A3 16.88%,
+    #FFDDAB 34.46%,
+    #FFC46B 50.13%,
+    #DC9B3A 64.84%,
+    #C28120 78.58%,
+    #B16C04 93.61%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.text-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  color: #B16C04;
+}
+
+.bg-card-gradient {
+  background: linear-gradient(
+  268.75deg, 
+ #B16C04 -12.61%,
+ #000000 116.71%);
+  border-radius: 10px;
+}
+
+.circle-gradient-left {
+  background: #B16C04;
+  filter: blur(225px);
+}
+
+.circle-gradient-right {
+background: linear-gradient(89.06deg, #B16C04 3.85%, rgba(217, 217, 217, 0) 68.24%);
+filter: blur(225px);
+}
+
+.circle-gradient-three {
+  background: linear-gradient(
+    268.99deg, 
+    #B16C04 3%, 
+    rgba(255, 255, 255, 0) 48.87%);
+  filter: blur(225px);
+}
+
+.illustration {
+  background: transparent;
+}
