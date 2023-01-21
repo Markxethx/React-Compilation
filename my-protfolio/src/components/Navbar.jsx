@@ -9,9 +9,9 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className={`w-full h-[90px] font-poppins ${styles.flexBetween} overflow-auto`}>
+    <nav className={`w-full h-[90px] font-poppins ${styles.flexBetween} ${styles.paddingX} px-10 overflow-auto`}>
       <div className="flex items-center">
-        <img src={logo} alt="logo" className='w-[32px] h-[32px] m-2' />
+        <img src={logo} alt="logo" className='w-[32px] h-[32px]' />
         <h1 className={`${styles.navbar} text-gradient`}>The Bl</h1><span className={`${styles.navbar} text-natural mb-[3px]`}>ank.eth</span>
       </div>
 
@@ -56,7 +56,6 @@ const Navbar = () => {
                       }`}
                       onClick={() => setActive(nav.title)}
                     >
-
                       <a href={`#${nav.id}`}>{nav.title}</a>
                     </li>
                   ))}
