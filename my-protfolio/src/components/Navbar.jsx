@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className={`w-full h-[90px] font-poppins ${styles.flexBetween} ${styles.paddingX} px-10 overflow-auto`}>
       <div className="flex items-center">
         <img src={logo} alt="logo" className='w-[32px] h-[32px]' />
-        <h1 className={`${styles.navbar} text-gradient`}>The Bl</h1><span className={`${styles.navbar} text-natural mb-[3px]`}>ank.eth</span>
+        <h1 className={`${styles.navbar} text-gradient`}>The Bl</h1><span className={`${styles.navbar} text-natural`}>ank.eth</span>
       </div>
 
         <ul className="hidden smd:flex">
@@ -44,11 +44,11 @@ const Navbar = () => {
               onClick={() => setToggle(!toggle)} />
         </div>
 
-        <div className={`${!toggle ? "hidden" : "fixed"} smd:hidden z-10 top-[90px] flex h-screen w-full bg-primary  `}>
+        <div className={`${!toggle ? "hidden" : "fixed"} ml-[-40px] sm:ml-[-110px] smd:hidden z-10 top-[90px] flex h-screen w-full bg-primary  `}>
 
               <div className='flex w-full justify-center side-bar items-center'>
                 <ul className={`flex-col mt-[-100px] text-center ease-in duration-300`}>
-                  {navLinks.map((nav, index) => (
+                  {navLinks.map((nav) => (
                     <li
                       key={nav.id}
                       className={`font-poppins font-normal mb-10 cursor-pointer text-[20px] ${
