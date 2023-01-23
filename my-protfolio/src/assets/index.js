@@ -15,6 +15,11 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 import vectors from "./vectors.png";
 import Justme from "./Justme.png";
+import Me from "./Me.png";
+import expertiseLogo from "./expertiseLogo.png";
+import tools from "./tools.png";
+import projects from "./projects.png";
+
 
 
 export {
@@ -35,4 +40,8 @@ export {
     close,
     vectors,
     Justme,
+    Me,
+    expertiseLogo,
+    tools,
+    projects,
 }
