@@ -8,6 +8,11 @@ const Navbar = () => {
   const [active, setActive] = useState("Skills");
   const [toggle, setToggle] = useState(false);
 
+  function setReverse () {
+    setToggle(prev => (!prev));
+    setActive(nav.title);
+  }
+
   return (
     <nav className={`w-full h-[90px] font-poppins ${styles.flexBetween} ${styles.paddingX} px-10 overflow-auto`}>
       <div className="flex items-center">
@@ -44,9 +49,9 @@ const Navbar = () => {
               onClick={() => setToggle(!toggle)} />
         </div>
 
-        <div className={`${!toggle ? "hidden" : "fixed"} ml-[-40px] sm:ml-[-110px] smd:hidden z-10 top-[90px] flex h-screen w-full bg-primary  `}>
+        <div className={`${!toggle ? "hidden" : "absolute"} ml-[-40px] sm:ml-[-110px] smd:hidden z-10 top-[90px] flex h-screen w-full bg-primary  `}>
 
-              <div className='flex w-full justify-center side-bar items-center'>
+              <div className={`flex w-full justify-center side-bar items-center`}>
                 <ul className={`flex-col mt-[-100px] text-center ease-in duration-300`}>
                   {navLinks.map((nav) => (
                     <li
@@ -54,7 +59,7 @@ const Navbar = () => {
                       className={`font-poppins font-normal mb-10 cursor-pointer text-[20px] ${
                         active === nav.title ? "text-gradient" : "text-natural"
                       }`}
-                      onClick={() => setActive(nav.title)}
+                      onClick={setReverse}
                     >
                       <a href={`#${nav.id}`}>{nav.title}</a>
                     </li>
