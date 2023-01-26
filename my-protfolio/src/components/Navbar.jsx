@@ -5,7 +5,7 @@ import { logo, close, menu } from "../assets";
 import { navLinks, modes } from '../constants';
 const Navbar = () => {
 
-  const [active, setActive] = useState("Skills");
+  const [active, setActive] = useState(" ");
   const [toggle, setToggle] = useState(false);
 
   function setReverse () {

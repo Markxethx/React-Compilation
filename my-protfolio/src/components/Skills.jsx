@@ -2,9 +2,16 @@ import React from 'react';
 import styles from "../style";
 import { expertise } from '../constants';
 import { expertiseLogo, tools } from "../assets";
+import { useState } from 'react';
 
 const Skills = () => {
-  return (
+
+    const [click, setClick] = useState(-1);
+    function clicking(event) {
+        event.preventDefault();
+        setClick(!click);
+    }
+    return (
     <div id='skills' className='flex flex-col'>
         <div className={`${styles.flexBetween} flex-col smd:flex-row px-10 mt-10 md:mt-0 md:mb-10 mb-5`}>
             <img src={expertiseLogo} className="ml-0 hidden smd:flex lg:ml-28 w-[418px] h-[418px]" alt="Image Logo" />
@@ -30,9 +37,9 @@ const Skills = () => {
             <h2 className='font-poppins leading-[70px] font-semibold non-italic text-start text-white text-[32px] '>Field of expertise</h2>
             
             <div className='flex w-full justify-between items-center flex-row flex-wrap md:px-0 sm:px-10'>
-                 {expertise.map((logo) => (
+                 {expertise.map((logo, index) => (
                     <div className='w-[120px] my-10 flex justify-between flex-col h-auto text-center' key={logo.id}>
-                        <img className='object-contain w-auto max-h-[70px] text-white' key={logo.id} src={logo.icon} alt="logos" /><br />
+                        <img className={`rotate object-contain w-auto max-h-[70px] ${click === index ? "rotate" : ""}`} onClick={clicking} key={logo.id} src={logo.icon} alt="logos" /><br />
                         <h3 className='text-gradient text-[18px] leading-6 font-semibold'>{logo.content}</h3>
                     </div>
                  ))}
