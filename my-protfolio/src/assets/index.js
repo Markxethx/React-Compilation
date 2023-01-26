@@ -33,6 +33,9 @@ import metricImperial from "./metricImperial.png";
 import blog from "./blog.png";
 import portfolio from "./portfolio.png";
 import quickoverview from "./quickoverview.png";
+import journey from "./journey.png";
+import developer from "./developer.png";
+import up from "./up.png";
 
 export {
     html,
@@ -70,5 +73,7 @@ export {
     blog,
     portfolio,
     quickoverview,
-
+    journey,
+    developer,
+    up,
 }
