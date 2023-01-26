@@ -19,8 +19,20 @@ import Me from "./Me.png";
 import expertiseLogo from "./expertiseLogo.png";
 import tools from "./tools.png";
 import projects from "./projects.png";
-
-
+import business from "./business.png";
+import startup from "./startup.png";
+import arrow from "./arrow.svg";
+import chatgpt from "./chatgpt.png";
+import gericht from "./gericht.png";
+import potter from "./potter.png";
+import weatherapp from "./weatherapp.png";
+import pokemon from "./pokemon.png";
+import translator from "./translator.png";
+import hoobank from "./hoobank.png";
+import metricImperial from "./metricImperial.png";
+import blog from "./blog.png";
+import portfolio from "./portfolio.png";
+import quickoverview from "./quickoverview.png";
 
 export {
     html,
@@ -44,4 +56,19 @@ export {
     expertiseLogo,
     tools,
     projects,
+    business,
+    startup,
+    arrow,
+    chatgpt,
+    gericht,
+    potter,
+    weatherapp,
+    pokemon,
+    translator,
+    hoobank,
+    metricImperial,
+    blog,
+    portfolio,
+    quickoverview,
+
 }
