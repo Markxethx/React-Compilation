@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className={`w-full h-[90px] font-poppins ${styles.flexBetween} ${styles.paddingX} px-10 overflow-auto`}>
       <div className="flex items-center">
-        <img src={logo} alt="logo" className='w-[32px] h-[32px]' />
+        <img src={logo} alt="logo" className='w-[32px] h-[32px] mr-1' />
         <h1 className={`${styles.navbar} text-gradient`}>The Bl</h1><span className={`${styles.navbar} text-natural`}>ank.eth</span>
       </div>
 
