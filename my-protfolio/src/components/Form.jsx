@@ -1,38 +1,36 @@
 import React from 'react'
 import { useState } from 'react'
 const Form = () => {
-    const [formData, setFormData] = useState(
+    const [formData, setFormData] = 
+    useState(
         {
             firstName: "", 
             lastName: "", 
             email: "", 
             comments: "", 
-            isFriendly: true,
-            employment: "",
-            favColor: ""
         }
     )
-    console.log(formData.favColor)
     
     function handleChange(event) {
-        console.log(event)
-        const {name, value, type, checked} = event.target
+        const {name, value, } = event.target
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
-                [name]: type === "checkbox" ? checked : value
+                [name] : value
             }
         })
     }
     
     return (
-        <form>
+        <section className='flex flex-col justify-center items-center'>
+        <form className='flex flex-col justify-center items-center'>
             <input
                 type="text"
                 placeholder="First Name"
                 onChange={handleChange}
                 name="firstName"
                 value={formData.firstName}
+                className="text-white w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent"
             />
             <input
                 type="text"
@@ -40,6 +38,7 @@ const Form = () => {
                 onChange={handleChange}
                 name="lastName"
                 value={formData.lastName}
+                className="text-white w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent"
             />
             <input
                 type="email"
@@ -47,78 +46,22 @@ const Form = () => {
                 onChange={handleChange}
                 name="email"
                 value={formData.email}
+                className="text-white w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent"
             />
             <textarea 
                 value={formData.comments}
                 placeholder="Comments"
                 onChange={handleChange}
                 name="comments"
+                className="text-white w-[300px] xlg:w-[400px] h-[100px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent"
             />
-            <input 
-                type="checkbox" 
-                id="isFriendly" 
-                checked={formData.isFriendly}
-                onChange={handleChange}
-                name="isFriendly"
-            />
-            <label htmlFor="isFriendly">Are you friendly?</label>
-            <br />
-            <br />
-            
-            <fieldset>
-                <legend>Current employment status</legend>
-                <input 
-                    type="radio"
-                    id="unemployed"
-                    name="employment"
-                    value="unemployed"
-                    checked={formData.employment === "unemployed"}
-                    onChange={handleChange}
-                />
-                <label htmlFor="unemployed">Unemployed</label>
-                <br />
-                
-                <input 
-                    type="radio"
-                    id="part-time"
-                    name="employment"
-                    value="part-time"
-                    checked={formData.employment === "part-time"}
-                    onChange={handleChange}
-                />
-                <label htmlFor="part-time">Part-time</label>
-                <br />
-                
-                <input 
-                    type="radio"
-                    id="full-time"
-                    name="employment"
-                    value="full-time"
-                    checked={formData.employment === "full-time"}
-                    onChange={handleChange}
-                />
-                <label htmlFor="full-time">Full-time</label>
-                <br />
-            </fieldset>
-            <br />
-            
-            <label htmlFor="favColor">What is your favorite color?</label>
-            <br />
-            <select 
-                id="favColor" 
-                value={formData.favColor}
-                onChange={handleChange}
-                name="favColor"
-            >
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-                <option value="yellow">Yellow</option>
-                <option value="green">Green</option>
-                <option value="blue">Blue</option>
-                <option value="indigo">Indigo</option>
-                <option value="violet">Violet</option>
-            </select>
+            <input type={"submit"} className="w-[100px] mt-5 h-[50px] text-white submit rounded bg-orange-500"/>
         </form>
+        <div className='mt-10'>
+            <h1 className='text-gradient font-semibold text-lg'><i class="fa-regular fa-copyright"></i> All Rights Reserved. The Blank.eth</h1>
+        </div>
+
+        </section>
     )
 }
 

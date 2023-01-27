@@ -4,8 +4,8 @@ import { triangle } from '../assets';
 import Form from './Form';
 export const Code = () => {
   return (
-    <section className='px-16 flex flex-col md:flex-row mb-10 mt-5'>
-      <div className='px-2 relative md:w-[669px] w-[300px] md:h-[760px]'>
+    <section id='contacts' className='flex flex-col md:flex-row justify-around items-center mb-10 mt-10'>
+      <div className='px-2 relative md:w-[669px] w-[300px] md:h-[760px] mb-[120px] lg:mb-10'>
         <div className='absolute z-0 top-0'>
                 <img src={triangle} className='w-auto z-0' alt="triangle" />
         </div>
@@ -16,9 +16,9 @@ export const Code = () => {
             </div>
             <div className='sm:ml-10 ml-5 relative flex flex-col'>
                 {info.map((items) => (
-                  <div key={items.id} className="pr-5 my-2 smd:w-[384px] smd:h-[67px] sm:h-[32px] flex flex-row items-center bg-card-gradient">
+                  <div key={items.id} className="pr-5 my-2 h-[40px] smd:w-[384px] smd:h-[67px] sm:h-[32px] flex flex-row items-center bg-card-gradient">
                       <img src={items.icon} alt="logo" className='mr-8 ml-10 w-[18px] smd:w-[42px]' />
-                      <h2 className='smd:text-[18px] sm:text-[16px] text-[12px] leading-7 text-white font-normal'><a href={items.links}>{items.content}</a></h2>
+                      <h2 className='smd:text-[18px] sm:text-[16px] text-[12px] leading-7 text-white font-normal contacts'><a href={items.links}>{items.content}</a></h2>
                   </div>
                 ))}
             </div>
@@ -26,6 +26,7 @@ export const Code = () => {
       </div>
 
       <Form />
+
     </section>
   )
 }
