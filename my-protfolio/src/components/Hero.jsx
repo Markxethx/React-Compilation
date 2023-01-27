@@ -11,9 +11,7 @@ const Hero = () => (
           <img src={vectors} alt="vector" className='w-[818px] h-[438px]' />
         </div>
 
-        <div className='absolute circle-gradient-left '>
 
-        </div>
 
         <div className='w-full h-auto'>
           <h2 className={`${styles.title} ${styles.paddingText}`}>Passionate</h2>
