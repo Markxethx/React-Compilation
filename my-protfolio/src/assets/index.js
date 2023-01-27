@@ -36,6 +36,11 @@ import quickoverview from "./quickoverview.png";
 import journey from "./journey.png";
 import developer from "./developer.png";
 import up from "./up.png";
+import twitter from "./twitter.png";
+import linkedln from "./linkedln.png";
+import gmail from "./gmail.png";
+import triangle from "./triangle.png";
+import github from "./github.svg";
 
 export {
     html,
@@ -76,4 +81,9 @@ export {
     journey,
     developer,
     up,
+    gmail,
+    twitter,
+    linkedln,
+    triangle,
+    github,
 }
