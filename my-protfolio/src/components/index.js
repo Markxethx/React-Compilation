@@ -5,7 +5,8 @@ import Items from "./Items";
 import Language from "./Language";
 import Skills from "./Skills";
 import Education from "./Education";
+import { Code } from "./Code";
 
 export {
-    Navbar, Hero, Project, Items, Language, Skills, Education,
+    Navbar, Hero, Project, Items, Language, Skills, Education, Code
 }
