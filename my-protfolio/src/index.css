@@ -335,3 +335,16 @@ filter: blur(225px);
             transform: scale(1) rotateZ(360deg);
   }
 }
+
+.contacts::after {
+  content: " ";
+  width: 300px;
+  height: 20px;
+  color: #B16C04;
+  background-color: #EFD1A3;
+}
+
+.submit:hover {
+  background-color: #ffffff;
+  color: orange;
+}
