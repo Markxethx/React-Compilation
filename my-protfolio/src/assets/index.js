@@ -41,6 +41,8 @@ import linkedln from "./linkedln.png";
 import gmail from "./gmail.png";
 import triangle from "./triangle.png";
 import github from "./github.svg";
+import menu1 from "./menu1.png";
+import x2 from "./x2.png";
 
 export {
     html,
@@ -86,4 +88,6 @@ export {
     linkedln,
     triangle,
     github,
+    menu1,
+    x2,
 }
