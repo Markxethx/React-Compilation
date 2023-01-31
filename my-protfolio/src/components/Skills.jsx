@@ -4,7 +4,7 @@ import { expertise } from '../constants';
 import { expertiseLogo, tools } from "../assets";
 import { useState } from 'react';
 
-const Skills = () => {
+const Skills = ({darkMode}) => {
 
     const [click, setClick] = useState(-1);
     function clicking(event) {
@@ -22,7 +22,7 @@ const Skills = () => {
                     <img src={tools} className='w-[120px] h-[120px]' alt="tools logo" />
                     <h2 className={`ml-5 mb-5 font-poppins leading-[70px] font-semibold non-italic text-[64px] text-gradient`}>Skills and Tools</h2>
                 </div>
-                    <p className={`${styles.text}`}>With the use of modern technologies i love 
+                    <p className={`${styles.text} ${!darkMode ? "dim-light" : "text-gray-600"}`}>With the use of modern technologies i love 
                     to build useful application and solve modern
                     problems alongside with people i work with.
                     I use to learn and adopt new things easily 
@@ -40,7 +40,7 @@ const Skills = () => {
                  {expertise.map((logo, index) => (
                     <div className='w-[120px] my-10 flex justify-between flex-col h-auto text-center' key={logo.id}>
                         <img className={`rotate object-contain w-auto max-h-[70px] ${click === index ? "rotate" : ""}`} onClick={clicking} key={logo.id} src={logo.icon} alt="logos" /><br />
-                        <h3 className='text-gradient text-[18px] leading-6 font-semibold'>{logo.content}</h3>
+                        <h3 className={`${!darkMode ? "text-gradient" : "text-gray-600"} text-[18px] leading-6 font-semibold`}>{logo.content}</h3>
                     </div>
                  ))}
             </div>

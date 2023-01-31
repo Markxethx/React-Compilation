@@ -2,8 +2,8 @@ import React from 'react';
 import styles from '../style';
 import { vectors, Me } from "../assets";
 
-const Hero = () => (
-  <section className={`text-white w-full h-auto flex-col md:flex-row px-10 relative ${styles.flexBetween} ${styles.paddingX}`}>
+const Hero = ({darkMode}) => (
+  <section className={`${!darkMode ? "text-white" : "text-black" } w-full h-auto flex-col md:flex-row px-10 relative ${styles.flexBetween} ${styles.paddingX}`}>
 
     <div>
       <div className='relative'>
@@ -18,10 +18,8 @@ const Hero = () => (
           <h1 className={`${styles.title} ${styles.paddingText} md:text-[64px] font-bold text-brown`}>Front End Developer</h1>
           <h2 className={`${styles.title} ${styles.paddingText} mb-15`}>From Philippines</h2>
           <h3 className={`font-poppins non-italic font-bold  text-[18px] mb-5 ${styles.paddingText}`}>Hi i am Mark John Factor Saspa</h3>
-          <p className={`${styles.text}`}>A freelance problem solver and critical thinker. Knowledge of </p>
-          <p className={`${styles.text}`}>Engineering and Mathematics. With our world of continuous growth </p>
-          <p className={`${styles.text}`}>and understanding i therefore love exploring new things and </p>
-          <p className={`${styles.text} mb-10`}>technologies.</p>
+          <p className={`${styles.text} ${!darkMode ? "dim-light" : "text-gray-600"} mb-10 max-w-[450px]`}>A freelance problem solver and critical thinker. Knowledge of Engineering and Mathematics.
+           With our world of continuous growth and understanding i therefore love exploring new things and technologies. </p>
         </div>
       </div>
     </div>

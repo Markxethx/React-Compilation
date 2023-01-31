@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-const Form = () => {
+const Form = ({darkmode}) => {
     const [formData, setFormData] = 
     useState(
         {
@@ -30,7 +30,7 @@ const Form = () => {
                 onChange={handleChange}
                 name="firstName"
                 value={formData.firstName}
-                className="text-white w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent"
+                className={`${!darkmode ? "text-white" : "text-gray-600"} w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent`}
             />
             <input
                 type="text"
@@ -38,7 +38,7 @@ const Form = () => {
                 onChange={handleChange}
                 name="lastName"
                 value={formData.lastName}
-                className="text-white w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent"
+                className={`${!darkmode ? "text-white" : "text-gray-600"} w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent`}
             />
             <input
                 type="email"
@@ -46,14 +46,14 @@ const Form = () => {
                 onChange={handleChange}
                 name="email"
                 value={formData.email}
-                className="text-white w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent"
+                className={`${!darkmode ? "text-white" : "text-gray-600"} w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent`}
             />
             <textarea 
                 value={formData.comments}
                 placeholder="Comments"
                 onChange={handleChange}
                 name="comments"
-                className="text-white w-[300px] xlg:w-[400px] h-[100px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent"
+                className={`${!darkmode ? "text-white" : "text-gray-600"} w-[300px] xlg:w-[400px] h-[100px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent`}
             />
             <input type={"submit"} className="w-[100px] mt-5 h-[50px] text-white submit rounded bg-orange-500"/>
         </form>

@@ -2,7 +2,7 @@ import React from 'react';
 import { info } from '../constants';
 import { triangle } from '../assets';
 import Form from './Form';
-export const Code = () => {
+export const Code = ( {darkMode}) => {
   return (
     <section id='contacts' className='flex flex-col md:flex-row justify-around items-center mb-10 mt-10'>
       <div className='px-2 relative md:w-[669px] w-[300px] md:h-[760px] mb-[120px] lg:mb-10'>
@@ -25,7 +25,7 @@ export const Code = () => {
         </div>
       </div>
 
-      <Form />
+      <Form darkmode={darkMode} />
 
     </section>
   )
