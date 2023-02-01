@@ -39,9 +39,8 @@ const Navbar = ({onclick, darkMode}) => {
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
-              className={`font-poppins hover-navbar font-normal cursor-pointer text-[5px] ss:text-[16px] ${
-                active === nav.title ? "text-gradient" : "text-natural"
-              } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"} ${!darkMode ? " text-white" : " text-gray-600"}` }
+              className={`font-poppins hover-navbar font-normal cursor-pointer text-[5px] ss:text-[16px]
+                text-natural ${index === navLinks.length - 1 ? "mr-0" : "mr-10"} ${!darkMode ? " text-white" : " text-gray-600"}` }
               onClick={() => setActive(nav.title)}
             >
 

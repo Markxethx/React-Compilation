@@ -1,5 +1,7 @@
-import React from 'react'
-import { useState } from 'react'
+import React from 'react';
+import { useState } from 'react';
+import { db } from '../firebase';
+
 const Form = ({darkmode}) => {
     const [formData, setFormData] = 
     useState(
@@ -10,7 +12,8 @@ const Form = ({darkmode}) => {
             comments: "", 
         }
     )
-    
+    const [loader, setLoader] = useState(false);
+
     function handleChange(event) {
         const {name, value, } = event.target
         setFormData(prevFormData => {
@@ -21,9 +24,29 @@ const Form = ({darkmode}) => {
         })
     }
     
+    function handleSubmit(e) {
+        e.preventDefault();
+        setLoader(true)
+
+        db.collection('contacts').add({
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            comments: comments,
+        })
+        .then(() => {
+            alert("message has been submitted");
+            setLoader(false)
+        })
+        .catch((error) => {
+            alert(error.message);
+            setLoader(false)
+        });
+    };
+
     return (
         <section className='flex flex-col justify-center items-center'>
-        <form className='flex flex-col justify-center items-center'>
+        <form className='flex flex-col justify-center items-center' onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="First Name"

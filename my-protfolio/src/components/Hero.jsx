@@ -15,7 +15,7 @@ const Hero = ({darkMode}) => (
 
         <div className='w-full h-auto'>
           <h2 className={`${styles.title} ${styles.paddingText}`}>Passionate</h2>
-          <h1 className={`${styles.title} ${styles.paddingText} md:text-[64px] font-bold text-brown`}>Front End Developer</h1>
+          <h1 className={`${styles.title} ${styles.paddingText} frontEnd md:text-[64px] text-[84px] font-bold text-brown`}>Front End Developer</h1>
           <h2 className={`${styles.title} ${styles.paddingText} mb-15`}>From Philippines</h2>
           <h3 className={`font-poppins non-italic font-bold  text-[18px] mb-5 ${styles.paddingText}`}>Hi i am Mark John Factor Saspa</h3>
           <p className={`${styles.text} ${!darkMode ? "dim-light" : "text-gray-600"} mb-10 max-w-[450px]`}>A freelance problem solver and critical thinker. Knowledge of Engineering and Mathematics.
