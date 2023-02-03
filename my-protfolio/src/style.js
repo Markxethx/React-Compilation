@@ -1,7 +1,7 @@
 const styles = {
     title : "font-poppins leading-[70px] font-semibold non-italic text-[60px] md:text-[40px] lg:text-[64px]",
     paragraph : "font-poppins non-italic text-lg tracking-wider",
-    text: "font-poppins non-italic font-bold  text-[18px] dim-light",
+    text: "font-poppins non-italic font-bold  text-[18px]",
     paddingText: "lg:mb-[20px] md:mb-[10px] mb-3",
 
     flexCenter: "flex justify-center items-center",

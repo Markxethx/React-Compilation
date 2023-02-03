@@ -26,7 +26,6 @@
   overflow: hidden !important;
 }
 .text-natural {
-  color: var(--white-color) !important;
   font-family: 'font-poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -68,6 +67,60 @@
   color: #B16C04;
 }
 
+.frontEnd {
+  position: relative;
+  font-size: 10vw;
+  color: #000000;
+  -webkit-text-stroke: 0.3vw #DC9B3A;
+  text-transform: uppercase;
+}
+
+.frontEnd::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: var(--brown-color);
+  -webkit-text-stroke: 0vw #0e0a16;
+  border-right: 10px solid #DC9B3A;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+
+
+@keyframes animate {
+  0%, 10%, 100%{
+    width: 0;
+  }
+  70%, 90% {
+    width: 100%;
+  }
+}
+.hover-navbar:hover {
+  font-family: 'font-poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+
+  /* identical to box height */
+
+
+  background: radial-gradient(
+    102.46% 3911.26% at 90.9% 55.36%,
+    #B16C04 0%,
+    #EFD1A3 16.88%,
+    #FFDDAB 34.46%,
+    #FFC46B 50.13%,
+    #DC9B3A 64.84%,
+    #C28120 78.58%,
+    #B16C04 93.61%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 .bg-card-gradient {
   background: linear-gradient(
   268.75deg, 
@@ -83,6 +136,20 @@
   height: 388px;
   left: -50%;
 
+}
+
+.thumbnail {
+    position : absolute;
+    top : 0 ;
+    z-index : -5000;
+    width : 0px;
+    height : 0px;
+}
+   
+.thumbnail > img {
+        object-fit : cover;
+        width : 0px;
+        height : 0px;
 }
 
 .circle-gradient-right {
