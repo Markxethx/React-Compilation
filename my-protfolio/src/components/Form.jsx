@@ -1,7 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
-import { db } from '../firebase';
-
+import React from 'react'
+import { useState } from 'react'
 const Form = ({darkmode}) => {
     const [formData, setFormData] = 
     useState(
