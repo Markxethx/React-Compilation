@@ -1,5 +1,14 @@
-import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from "react";
+import { db } from "../firebase";
+import {
+  collection,
+  getDocs,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  doc,
+} from "firebase/firestore";
+
 const Form = ({darkmode}) => {
     const [formData, setFormData] = 
     useState(
@@ -10,7 +19,9 @@ const Form = ({darkmode}) => {
             comments: "", 
         }
     )
-    const [loader, setLoader] = useState(false);
+
+    const [users, setUsers] = useState([]);
+    const usersCollectionRef = collection(db, "users");
 
     function handleChange(event) {
         const {name, value, } = event.target
@@ -22,29 +33,15 @@ const Form = ({darkmode}) => {
         })
     }
     
-    function handleSubmit(e) {
-        e.preventDefault();
-        setLoader(true)
-
-        db.collection('contacts').add({
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            comments: comments,
-        })
-        .then(() => {
-            alert("message has been submitted");
-            setLoader(false)
-        })
-        .catch((error) => {
-            alert(error.message);
-            setLoader(false)
-        });
+    const handleSubmit = async () => {
+        await addDoc(usersCollectionRef, { firstName: formData.firstName, lastName: formData.lastName, email: formData.email, comments: formData.comments });
     };
 
+
+  console.log(formData.firstName)
     return (
         <section className='flex flex-col justify-center items-center'>
-        <form className='flex flex-col justify-center items-center' onSubmit={handleSubmit}>
+        <form className='flex flex-col justify-center items-center'>
             <input
                 type="text"
                 placeholder="First Name"
@@ -76,7 +73,7 @@ const Form = ({darkmode}) => {
                 name="comments"
                 className={`${!darkmode ? "text-white" : "text-gray-600"} w-[300px] xlg:w-[400px] h-[100px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent`}
             />
-            <input type={"submit"} className="w-[100px] mt-5 h-[50px] text-white submit rounded bg-orange-500"/>
+            <input type={"submit"} onClick={handleSubmit} className="w-[100px] mt-5 h-[50px] text-white submit rounded bg-orange-500"/>
         </form>
         <div className='mt-10'>
             <h1 className='text-gradient font-semibold text-lg'><i class="fa-regular fa-copyright"></i> All Rights Reserved. The Blank.eth</h1>

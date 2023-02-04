@@ -14,6 +14,7 @@ const Education = ({darkMode}) => {
                             <div className='block'>
                                 <h2 className={`${!darkMode ? "text-white" : "text-gray-900"} leading-7 font-bold text-[18px]`}>{item.title}</h2>
                                 <p className={`${!darkMode ? "dim-light" : "text-gray-400"} font-semibold text-base`}>{item.content}</p>
+               
                             </div>
                         </div>
                 ))}
