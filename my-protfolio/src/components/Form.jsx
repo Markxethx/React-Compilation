@@ -2,78 +2,59 @@ import { useState, useEffect } from "react";
 import { db } from "../firebase";
 import {
   collection,
-  getDocs,
   addDoc,
-  updateDoc,
-  deleteDoc,
-  doc,
 } from "firebase/firestore";
 
 const Form = ({darkmode}) => {
-    const [formData, setFormData] = 
-    useState(
-        {
-            firstName: "", 
-            lastName: "", 
-            email: "", 
-            comments: "", 
-        }
-    )
-
-    const [users, setUsers] = useState([]);
-    const usersCollectionRef = collection(db, "users");
-
-    function handleChange(event) {
-        const {name, value, } = event.target
-        setFormData(prevFormData => {
-            return {
-                ...prevFormData,
-                [name] : value
-            }
-        })
-    }
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [comment, setComment] = useState("");
     
-    const handleSubmit = async () => {
-        await addDoc(usersCollectionRef, { firstName: formData.firstName, lastName: formData.lastName, email: formData.email, comments: formData.comments });
+    const usersCollectionRef = collection(db, "users");
+    
+
+      
+    const createUser = async () => {
+    await addDoc(usersCollectionRef, {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        comment: comment,
+    });
     };
 
-
-  console.log(formData.firstName)
     return (
         <section className='flex flex-col justify-center items-center'>
         <form className='flex flex-col justify-center items-center'>
             <input
                 type="text"
                 placeholder="First Name"
-                onChange={handleChange}
+                onChange={(event) => {setFirstName(event.target.value)}}
                 name="firstName"
-                value={formData.firstName}
                 className={`${!darkmode ? "text-white" : "text-gray-600"} w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent`}
             />
             <input
                 type="text"
                 placeholder="Last Name"
-                onChange={handleChange}
+                onChange={(event) => {setLastName(event.target.value)}}
                 name="lastName"
-                value={formData.lastName}
                 className={`${!darkmode ? "text-white" : "text-gray-600"} w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent`}
             />
             <input
                 type="email"
                 placeholder="Email"
-                onChange={handleChange}
+                onChange={(event) => {setEmail(event.target.value)}}
                 name="email"
-                value={formData.email}
                 className={`${!darkmode ? "text-white" : "text-gray-600"} w-[300px] xlg:w-[400px] h-[50px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent`}
             />
             <textarea 
-                value={formData.comments}
                 placeholder="Comments"
-                onChange={handleChange}
+                onChange={(event) => {setComment(event.target.value)}}
                 name="comments"
                 className={`${!darkmode ? "text-white" : "text-gray-600"} w-[300px] xlg:w-[400px] h-[100px] my-2 rounded-[2px] border-t-0 border-l-0 border-r-0 border-b-[2px] border-brown bg-transparent`}
             />
-            <input type={"submit"} onClick={handleSubmit} className="w-[100px] mt-5 h-[50px] text-white submit rounded bg-orange-500"/>
+            <button onClick={createUser} className="w-[100px] mt-5 h-[50px] text-white submit rounded bg-orange-500">Submit</button>
         </form>
         <div className='mt-10'>
             <h1 className='text-gradient font-semibold text-lg'><i class="fa-regular fa-copyright"></i> All Rights Reserved. The Blank.eth</h1>
