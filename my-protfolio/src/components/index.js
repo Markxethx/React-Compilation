@@ -6,7 +6,8 @@ import Language from "./Language";
 import Skills from "./Skills";
 import Education from "./Education";
 import { Code } from "./Code";
+import Loading from "./Loading";
 
 export {
-    Navbar, Hero, Project, Items, Language, Skills, Education, Code
+    Navbar, Hero, Project, Items, Language, Skills, Education, Code, Loading
 }
