@@ -35,12 +35,12 @@ const GetInTouch = () => {
         console.log(formData)
     }
   return (
-    <section className='getInTouch flex justify-center items-center flex-col w-full lg:mb-[120px] lg:mt-[82px]'>
-        <h1 className='font-normal text-[40px] lg:mb-[54px]'>GET IN TOUCH</h1>
+    <section className='getInTouch flex justify-center items-center flex-col w-full lg:mb-[120px] lg:mt-[82px] px-4 md:px-6 overflow-hidden'>
+        <h1 className='font-normal text-[40px] lg:mb-[54px] md:mb-[40px] mb-[30px]'>GET IN TOUCH</h1>
         <form onSubmit={handleSubmit}>
             <label htmlFor="name">NAME</label>
             <input
-                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px]'
+                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px] md:w-[600px] md:h-[40px] md:mb-[20px] sm:w-[590px] sm:h-[35px] sm:mb-[15px] w-11/12 xxs:w-[390px] h-[35px] mb-[20px]'
                 id='name'
                 type="text"
                 onChange={handleChange}
@@ -49,7 +49,7 @@ const GetInTouch = () => {
             />
             <label htmlFor="email">EMAIL</label>
             <input
-                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px]'
+                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px] md:w-[600px] md:h-[40px] md:mb-[20px] sm:w-[590px] sm:h-[35px] sm:mb-[15px] w-11/12 xxs:w-[390px] h-[35px] mb-[20px]'
                 type="email"
                 id='email'
                 onChange={handleChange}
@@ -60,7 +60,7 @@ const GetInTouch = () => {
             <label for="phone">CONTACT NO.</label>
             <br />
             <input 
-                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px]'
+                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px] md:w-[600px] md:h-[40px] md:mb-[20px] sm:w-[590px] sm:h-[35px] sm:mb-[15px] w-11/12 xxs:w-[390px] h-[35px] mb-[20px]'
                 type="tel"
                 id="phone" 
                 name="phone" 
@@ -74,7 +74,7 @@ const GetInTouch = () => {
             <label htmlFor="purpose">PURPOSE OF INQUIRY</label>
             <br />
             <select 
-                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px] lg:text-[15px]'
+                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px] md:w-[600px] md:h-[40px] md:mb-[20px] sm:w-[590px] sm:h-[35px] sm:mb-[15px] w-11/12 xxs:w-[390px] h-[35px] mb-[20px] lg:text-[15px]'
                 id="purpose" 
                 value={formData.purpose}
                 onChange={handleChange}
@@ -91,7 +91,7 @@ const GetInTouch = () => {
 
             <fieldset className='lg:mb-[40px]'>
                 <legend>PREFFERED WAY TO CONTACT YOU</legend>
-                <div className='flex justify-evenly items-center lg:flex-row flex-col'>
+                <div className='flex justify-evenly items-center flex-row mb-[20px]'>
                     <input 
                         type="radio"
                         id="text"
@@ -130,7 +130,7 @@ const GetInTouch = () => {
             <label htmlFor="position">ARE YOU A</label>
             <br />
             <select
-                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px] lg:text-[15px]'
+                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px] md:w-[600px] md:h-[40px] md:mb-[20px] sm:w-[590px] sm:h-[35px] sm:mb-[15px] w-11/12 xxs:w-[390px] h-[35px] mb-[20px] lg:text-[15px]'
                 id="position" 
                 value={formData.position}
                 onChange={handleChange}
@@ -150,7 +150,7 @@ const GetInTouch = () => {
                 <p className='lg:text-[15px]'>HOW MANY WEBSITES & SOCIAL MEDIA CHANNELS DO YOU HAVE</p>
             </label>
             <textarea
-                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px] lg:text-[15px]'
+                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px] md:w-[600px] md:h-[40px] md:mb-[20px] sm:w-[590px] sm:h-[35px] sm:mb-[15px] w-11/12 xxs:w-[390px] h-[35px] mb-[20px] lg:text-[15px]'
                 id='numberOfExistingChannels'
                 value={formData.comments}
                 onChange={handleChange}
@@ -162,7 +162,7 @@ const GetInTouch = () => {
                 <p>COMPANY</p>
             </label>
             <textarea
-                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px] lg:text-[15px]'
+                className='lg:w-[711px] lg:h-[47px] border-solid border-2 lg:mb-[40px] md:w-[600px] md:h-[40px] md:mb-[20px] sm:w-[590px] sm:h-[35px] sm:mb-[15px] w-11/12 xxs:w-[390px] h-[35px] mb-[20px] lg:text-[15px]'
                 id='company'
                 value={formData.company}
                 onChange={handleChange}
@@ -178,7 +178,7 @@ const GetInTouch = () => {
                 <br />
                 <div className='flex flex-between items-start'>
                     <input
-                        className='lg:mr-5 lg:mt-1'
+                        className='lg:mr-5 lg:mt-[6px] mr-[8px] mt-[6px]'
                         type="checkbox"
                         id="residential"
                         name="residential"
@@ -195,7 +195,7 @@ const GetInTouch = () => {
                 
                 <div className='flex flex-between items-start'>
                     <input
-                        className='lg:mr-5 lg:mt-1'
+                        className='lg:mr-5 lg:mt-[6px] mr-[8px] mt-[6px]'
                         type="checkbox"
                         id="commercial"
                         name="commercial"
@@ -212,7 +212,7 @@ const GetInTouch = () => {
                 
                 <div className='flex flex-between items-start'>
                     <input
-                        className='lg:mr-5 lg:mt-1'
+                        className='lg:mr-5 lg:mt-[6px] mr-[8px] mt-[6px]'
                         type="checkbox"
                         id="industrial"
                         name="industrial"
@@ -229,7 +229,7 @@ const GetInTouch = () => {
                 
                 <div className='flex flex-between items-start'>
                     <input
-                        className='lg:mr-5 lg:mt-1'
+                        className='lg:mr-5 lg:mt-[6px] mr-[8px] mt-[6px]'
                         type="checkbox"
                         id="tourism"
                         name="tourism"
@@ -246,7 +246,7 @@ const GetInTouch = () => {
 
                 <div className='flex flex-between items-start'>
                     <input
-                        className='lg:mr-5 lg:mt-1'
+                        className='lg:mr-5 lg:mt-[6px] mr-[8px] mt-[6px]'
                         type="checkbox"
                         id="rawLand"
                         name="rawLand"
@@ -260,8 +260,8 @@ const GetInTouch = () => {
                 </div>
 
             </fieldset>
-            <div className='flex justify-center items-center'>
-                <button type='submit' className='lg:w-[279px] lg:h-[45px] rounded-full font-bold text-white lg:text-[24px]'>SEND</button>
+            <div className='flex justify-center items-center my-[20px] sm:my-[30px] md:my-[40px]'>
+                <button type='submit' className='lg:w-[279px] h-[40px] w-[100px] xxs:w-[120px] sm:w-[160px] md:w-[190px] lg:h-[50px] rounded-full font-bold text-white lg:text-[24px]'>SEND</button>
             </div>
             
         </form>
