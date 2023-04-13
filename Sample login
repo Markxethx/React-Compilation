@@ -1,0 +1,49 @@
+import React from "react";
+import REinput from "./REinput";
+import { Link } from "react-router-dom";
+
+export default function LoginForm() {
+  return (
+    <div className="w-full p-4 md:p-10">
+      <form className="bg-white  max-w-[780px] lg:px-20 pt-6 pb-8 mb-4">
+        <h3 className="text-sm mb-2 uppercase">REAL ESTATE DIGITAL PLATFORM</h3>
+        <div className="mb-5">
+          <h1 className="font-monument text-3xl uppercase ">REGISTRATION</h1>
+        </div>
+        <REinput label="Email" id="email" type="text" />
+        <REinput label="Password" id="password" type="text" />
+        <div className="my-5">
+          <p className="text-center">
+            By signing up you agree to our Terms of Service and Privacy Policy.
+          </p>
+        </div>
+        <div className="mb-3">
+          <button
+            type="button"
+            class="font-bold w-full inline-block rounded bg-d1yellow px-6 pt-2.5 pb-2 text-xs   leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)]"
+          >
+            Sign Up
+          </button>
+        </div>
+        <div className="my-4 flex">
+          <div class="h-[1px] bg-black mx-auto max-w-[50%] mt-2 w-4/12"></div>
+          <p>or with</p>
+          <div class="h-[1px] bg-black mx-auto max-w-[50%] mt-2 w-4/12"></div>
+        </div>
+        <div className="flex justify-evenly mb-4">
+          <button className="text-white bg-[#2C63B5] rounded-full min-w-[30px] !py-0">
+            Facebook
+          </button>
+          <button className="text-white bg-[#ED4B4B] rounded-full">
+            Google
+          </button>
+        </div>
+        <div className="text-center">
+          <p>
+            Already have an account? <Link to="/signup">Sign Up Here.</Link>
+          </p>
+        </div>
+      </form>
+    </div>
+  );
+}
