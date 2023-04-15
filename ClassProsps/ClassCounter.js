@@ -1,3 +1,6 @@
+Not a good move
+
+
 import React, { Component } from 'react'
 
 class ClassCounter extends Component {
