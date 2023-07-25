@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brown-color: #b16c04;
+  --white-color: #ffffff;
+}
+* {
+  padding: 0;
+}
+#root {
+  padding: 0;
+  max-width: auto;
+  text-align: start;
+  max-width:none;
+}
+.text-brown {
+  color: var(--brown-color);
+}
+
+.border-brown {
+  border-color: var(--brown-color);
+  overflow: hidden !important;
+}
+.text-natural {
+  font-family: 'font-poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+.text-gradient {
+  font-family: 'font-poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+
+  /* identical to box height */
+
+
+  background: radial-gradient(
+    102.46% 3911.26% at 90.9% 55.36%,
+    #B16C04 0%,
+    #EFD1A3 16.88%,
+    #FFDDAB 34.46%,
+    #FFC46B 50.13%,
+    #DC9B3A 64.84%,
+    #C28120 78.58%,
+    #B16C04 93.61%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.dim-light {
+  color: rgba(255, 255, 255, 0.5);
+}
+.text-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  color: #B16C04;
+}
+
+.frontEnd {
+  position: relative;
+  font-size: 10vw;
+  color: #000000;
+  -webkit-text-stroke: 0.3vw #DC9B3A;
+  text-transform: uppercase;
+}
+
+.frontEnd::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: var(--brown-color);
+  -webkit-text-stroke: 0vw #0e0a16;
+  border-right: 10px solid #DC9B3A;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+
+
+
+@keyframes animate {
+  0%, 10%, 100%{
+    width: 0;
+  }
+  70%, 90% {
+    width: 100%;
+  }
+}
+.hover-navbar:hover {
+  font-family: 'font-poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+
+  /* identical to box height */
+
+
+  background: radial-gradient(
+    102.46% 3911.26% at 90.9% 55.36%,
+    #B16C04 0%,
+    #EFD1A3 16.88%,
+    #FFDDAB 34.46%,
+    #FFC46B 50.13%,
+    #DC9B3A 64.84%,
+    #C28120 78.58%,
+    #B16C04 93.61%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.bg-card-gradient {
+  background: linear-gradient(
+  268.75deg, 
+ #B16C04 -12.61%,
+ #000000 116.71%);
+  border-radius: 10px;
+}
+
+.circle-gradient-left {
+  background: #B16C04;
+  filter: blur(225px);
+  width: 225px;
+  height: 388px;
+  left: -50%;
+
+}
+
+.thumbnail {
+    position : absolute;
+    top : 0 ;
+    z-index : -5000;
+    width : 0px;
+    height : 0px;
+}
+   
+.thumbnail > img {
+        object-fit : cover;
+        width : 0px;
+        height : 0px;
+}
+
+.circle-gradient-right {
+background: linear-gradient(89.06deg, #B16C04 3.85%, rgba(217, 217, 217, 0) 68.24%);
+filter: blur(225px);
+}
+
+.circle-gradient-three {
+  background: linear-gradient(
+    268.99deg, 
+    #B16C04 3%, 
+    rgba(255, 255, 255, 0) 48.87%);
+  filter: blur(225px);
+}
+
+.illustration {
+  background: transparent;
+}
+
+.side-bar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.wheel {
+  border-radius: 50%;
+  margin-left: 105px;
+  position: absolute;
+  width: 594px;
+  height: 594px;
+  animation-name: wheel;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: rotate(0);
+}
+@media only screen and (max-width: 1080px) {
+  .wheel {
+    max-width: 364px;
+    max-height: 364px;
+    margin-left: 85px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .wheel {
+    max-width: 434px;
+    max-height: 434px;
+    margin-left: 85px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .wheel {
+    max-width: 300px;
+    max-height: 300px;
+    margin-left: 73px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .wheel {
+    max-width: 250px;
+    max-height: 250px;
+    margin-left: 70px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .wheel {
+    max-width: 220px;
+    max-height: 220px;
+    margin-left: 60px;
+  }
+}
+
+.cabin {
+  background-color: #DC9B3A;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  border-radius: 50%;
+  transform-origin: 50% 0%;
+  animation: cabins 30s ease-in-out infinite;
+}
+
+.cabin:nth-of-type(1) {
+  right: -8.5%;
+  top: 50%;
+}
+.cabin:nth-of-type(2) {
+  right: 17%;
+  top: 93.5%;
+}
+.cabin:nth-of-type(3) {
+  right: 67%;
+  top: 93.5%;
+}
+.cabin:nth-of-type(4) {
+  left: -8.5%;
+  top: 50%;
+}
+.cabin:nth-of-type(5) {
+  left: 17%;
+  top: 7%;
+}
+.cabin:nth-of-type(6) {
+  right: 17%;
+  top: 7%;
+}
+
+@keyframes wheel {
+   0% {
+     transform: rotate(0deg);
+   }
+   100% {
+     transform: rotate(360deg);
+   }
+}
+@keyframes cabins {
+  0% {
+    transform: rotate(0deg);
+    width: 10%;
+    height: 10%;
+  }
+  25% {
+    width: 15%;
+    height: 15%;
+  }
+  50% {
+    width: 10%;
+    height: 10%;
+  }
+  100% {
+    transform: rotate(-360deg);
+    width: 15%;
+    height: 15%;
+  }
+}
+
+.card::before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(52, 73, 94, 0.75);
+}
+.card {
+  transition: all .8s;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 100%;
+  padding: 0 !important;
+}
+.card:hover {
+  transform: scale(1.2);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.link1, .link2 {
+  height: 60px;
+  width: 60px;
+}
+
+.bot {
+  transform: all .5s;
+}
+
+.exp:hover {
+  background: linear-gradient(
+    268.75deg, 
+   #B16C04 -12.61%,
+   #000000 116.71%);
+    border-radius: 10px;
+}
+
+.rotate:hover {
+  animation: rotate-scale-up .5s ease-in-out;
+}
+.rotate-scale-up {
+	-webkit-animation: rotate-scale-up 0.65s linear both;
+	animation: rotate-scale-up 0.65s linear both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-1-26 20:11:52
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation rotate-scale-up
+ * ----------------------------------------
+ */
+ @-webkit-keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+            transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+            transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+            transform: scale(1) rotateZ(360deg);
+  }
+}
+@keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+            transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+            transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+            transform: scale(1) rotateZ(360deg);
+  }
+}
+
+.contacts::after {
+  content: " ";
+  width: 300px;
+  height: 20px;
+  color: #B16C04;
+  background-color: #EFD1A3;
+}
+
+.submit:hover {
+  background-color: #ffffff;
+  color: orange;
+}
