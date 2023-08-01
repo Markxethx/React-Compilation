@@ -65,3 +65,4 @@ export default async function Home( { searchParams }) {
     </main> 
   )
 }
+//added in github
